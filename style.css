@@ -1,0 +1,144 @@
+html,
+body{
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+	margin: 0;
+	background-image: url('wall.jpg');
+	background-repeat: repeat;
+	background-size: contain;
+
+}
+
+#container{
+	position: relative;
+	height: 90%;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 2%;
+	border: 1px solid black;
+	overflow: hidden;
+    background: linear-gradient(to top, #6dd5ed, #2193b0);
+}
+
+#score_help{
+	text-align: center;
+	background: linear-gradient(to top, #7B920A, #ADD100);
+	font-size: 30px;
+	border: 1px solid black;
+}
+
+#branch{
+	position: absolute;
+	height: 2%;
+	width: 100%;
+	top: 23%;
+    background: linear-gradient(to top, #e74c3c, #000000); 
+}
+
+.hen{
+	position: absolute;
+	background-image: url('hen.png');
+	background-size: cover; /*so that entire image comes within div*/
+    top: 10%;
+	height: 15%;
+	width: 10%;
+    z-index: 100; /*hen will overlap all other elements(egg and branch)*/
+ }
+
+ #hen1{
+ 	left: 20%;
+ }
+
+ #hen2{
+ 	left: 40%;
+ }
+
+ #hen3{
+ 	left: 60%;
+ }
+
+ .egg{
+ 	position: absolute;
+ 	top: 18%;
+ 	height: 5%;
+ 	width: 1.7%;
+ 	border-radius: 50%;
+ 	border-color: #F2F1EF;
+ 	border-style: solid;
+ 	border-width: 1px;
+ 	background-color: white;
+ 	background-image: url('egg1.png');
+ 	background-size: cover;
+ 	z-index: 99;
+ 	/*eggs should appear after the basket if not caught*/ 
+ }
+/*calculation: left of hen + hen width/2 - egg width/2*/
+ #egg1{
+ 	left: calc(20% + 8%/2 - 2%/2);
+ }
+
+ #egg2{
+ 	left: calc(40% + 8%/2 - 2%/2);
+ }
+
+ #egg3{
+ 	left: calc(60% + 8%/2 - 2%/2);
+ }
+
+.bullseye{
+	display: none;
+	position: absolute;
+	height: 7%;
+	width: 8%;
+	bottom: 0%;
+	background-image: url('bullseye.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 11;
+}
+
+ #bullseye1{
+ 	left: calc(20% + 8%/2 - 8%/2);
+ }
+
+ #bullseye2{
+ 	left: calc(40% + 8%/2 - 8%/2);
+ }
+
+ #bullseye3{
+ 	left: calc(60% + 8%/2 - 8%/2);
+ }
+
+ #basket{
+ 	position: absolute;
+ 	background-image: url('basket.png');
+ 	height: 100px;
+ 	width: 85px;
+ 	background-size: cover;
+ 	bottom: 15px;
+ 	left: 50%;
+ 	z-index: 11;
+ }
+
+ #floor{
+ 	position: absolute;
+ 	bottom: 0;
+ 	height: 7%;
+ 	width: 100%;
+    background: linear-gradient(to bottom, #e74c3c, #000000); 
+ 	z-index: 10;
+ }
+
+#restart{
+	font-size: 40px;
+	background: linear-gradient(to top, #190A05, #870000); 
+	border: 2px solid black;
+	position: absolute;
+	width: 100%;
+	height: 8%;
+	top: 40%;
+	cursor: pointer;
+	color: white;
+	display: none;
+}
